@@ -6,7 +6,7 @@ import Form from './Form'
 
 const Home = () => {
 
-    useFirestoreConnect([{collection: 'notes', orderBy: ['createdAt', 'desc']}])
+    useFirestoreConnect([{ collection: 'notes', orderBy: ['createdAt', 'desc'] }])
 
     const notes = useSelector((state) => state.firestore.ordered.notes)
     console.log(notes);
@@ -15,7 +15,7 @@ const Home = () => {
         <div className="container">
             <div className="row center-align">
                 <div className="col s7"><Form /></div>
-                <div className="col s5"><NotesList /></div>
+                <div className="col s5"><NotesList notes={notes} /></div>
             </div>
         </div>
     )

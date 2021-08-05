@@ -1,9 +1,12 @@
 import React from 'react'
+import Note from './Note'
 
-const NotesList = () => {
+const NotesList = ({ notes }) => {
     return (
-        <div>
-            NoteList
+        <div className="noteslist">
+            {
+                notes && notes.map(note => <Note note={note} key={note.id} />)
+            }
         </div>
     )
 }
