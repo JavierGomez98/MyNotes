@@ -31,14 +31,14 @@ export const deleteNote = (note) => {
 
 export const toggleFav = (note) => {
     return (dispatch, getState, { getFirestore }) => {
-        const favorite = !note.favorite
+        const favstatus = !note.favorite
         const firestore = getFirestore()
-        firestore.collection('notes').doc(note.id).delete()
-            .then(() => {
-                console.log('Delete the note Successfully');
-            })
-            .catch((err) => {
-                console.log(err)
-            });
+        firestore.collection('notes').doc(note.id).update({
+            favorite: favstatus
+        }).then(() => {
+            console.log('Toggle favorite Successfully');
+        }).catch((err) => {
+            console.log(err)
+        });
     }
 }
