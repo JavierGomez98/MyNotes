@@ -17,8 +17,8 @@ const Form = () => {
 
     return (
         <div className="section">
-            <form onSubmit={handleSubmit} className="white">
-                <h5 className="grey-text text-darken-3">New Note</h5>
+            <form onSubmit={handleSubmit} className="dark-card borer-box-shadow white-text">
+                <h5>New Note</h5>
                 <div className="input-field">
                     <input id="note_title" type="text" className="validate" {...bindTitle} />
                     <label htmlFor="note_title">Note Title</label>
@@ -27,7 +27,7 @@ const Form = () => {
                     <textarea id="note_content" className="materialize-textarea" {...bindContent} ></textarea>
                     <label htmlFor="note_content">Note Content</label>
                 </div>
-                <button className="btn blue">Add</button>
+                <button className="btn dark-grey">Add</button>
             </form>
         </div>
     )

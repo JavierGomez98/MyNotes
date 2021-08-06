@@ -1,5 +1,5 @@
 body {
-    background-color: #D3D3D3;
+    background-color: #18191a;
 }
 
 .brand-logo {
@@ -19,4 +19,25 @@ form {
 .noteslist {
     padding: 20px;
     margin-top: 60px;
+}
+
+.borer-box-shadow {
+    border-radius: 5px;
+    box-shadow: 0 3px 5px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%);
+}
+
+.dark-card {
+    background-color: #242526;
+}
+
+.dark-grey {
+    background-color: #1c1e21;
+}
+
+button.dark-grey:hover {
+    background-color: #36393d;
+}
+
+.dark-card input, textarea {
+    color: #fff;
 }
